@@ -1,4 +1,4 @@
-# NearLocal — your NEAR, in your local currency
+# Near2Cash — your NEAR, in your local currency
 
 A NEAR wallet whose home screen answers one question — **"what is this worth in
 my money?"** — and whose convert flow takes a NEAR asset to a local-currency
@@ -17,7 +17,7 @@ Thesis dashboard, *Flow, Not Price*
 Millions of people — across Africa and beyond — earn and hold crypto but spend
 in local currency. Getting from NEAR to naira (or cedis, or shillings) today
 means P2P markets, opaque rates and counterparty risk. Every wallet shows the
-crypto balance first and the fiat value as small print. NearLocal inverts
+crypto balance first and the fiat value as small print. Near2Cash inverts
 that: **your money first, crypto second.**
 
 ## Try it (30 seconds, nothing to install)
@@ -83,7 +83,7 @@ One self-contained `index.html` — no build step, no server, no keys:
 Off-ramps exist (continental exchanges, P2P desks, global on/off-ramp
 providers). None is NEAR-native with Intents under the hood, and the P2P route
 most Nigerians actually use prices opaquely — the counterparty's spread is the
-product. NearLocal's bet is that **radical rate transparency** (mid-market rate
+product. Near2Cash's bet is that **radical rate transparency** (mid-market rate
 shown, every fee itemised, live solver quotes instead of a house price) plus
 a fiat-first wallet is the version people trust with real money.
 
