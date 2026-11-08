@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce NearNaira's live behaviour from the command line.
+"""Reproduce NearLocal's live behaviour from the command line.
 
 One command:  python3 verify.py [near-account]
 
@@ -63,7 +63,7 @@ def call(url, body=None):
         headers={
             "Content-Type": "application/json",
             # some edges reject Python's default urllib user-agent
-            "User-Agent": "Mozilla/5.0 (compatible; nearnaira-verify/1.0)",
+            "User-Agent": "Mozilla/5.0 (compatible; nearlocal-verify/1.0)",
         },
     )
     last = None

@@ -1,10 +1,11 @@
-# NearNaira — your NEAR, in your naira
+# NearLocal — your NEAR, in your local currency
 
 A NEAR wallet whose home screen answers one question — **"what is this worth in
 my money?"** — and whose convert flow takes a NEAR asset to a local-currency
 bank payout in a few taps: live balance, live conversion quote through NEAR
 Intents, live exchange rate, a full fee breakdown before you confirm, and
-payout to your bank.
+payout to your bank. Built in Nigeria, for everywhere: naira is the default
+showcase currency, and the same flow prices in 11 currencies.
 
 **NEAR Hackathon 2026 — Real-World Money track.** Solo project by Shuaibu
 Yahaya (`iamyerhyer.near`). My second entry; my other entry is the Investment
@@ -13,21 +14,23 @@ Thesis dashboard, *Flow, Not Price*
 
 ## The problem
 
-Millions of Africans earn and hold crypto but spend in local currency. Getting
-from NEAR to naira today means P2P markets, opaque rates and counterparty
-risk. Every wallet shows the crypto balance first and the fiat value as small
-print. NearNaira inverts that: **your money first, crypto second.**
+Millions of people — across Africa and beyond — earn and hold crypto but spend
+in local currency. Getting from NEAR to naira (or cedis, or shillings) today
+means P2P markets, opaque rates and counterparty risk. Every wallet shows the
+crypto balance first and the fiat value as small print. NearLocal inverts
+that: **your money first, crypto second.**
 
 ## Try it (30 seconds, nothing to install)
 
 1. Open the live demo. The wallet loads `iamyerhyer.near` with its **real,
-   live balances** — the naira total is computed from live prices and a live
-   FX rate, not stored anywhere.
+   live balances** — the total in your currency is computed from live prices
+   and a live FX rate, not stored anywhere.
 2. Type any NEAR account into the box and tap **Load** — the balances are read
    live from NEAR mainnet.
 3. Tap **NEAR**, enter `10`, tap **Get live quote**. You get a real quote from
    live Intents solvers, the mid-market ₦/$ rate shown beside the maths, the
-   1% service fee as its own line, and the exact naira the bank would receive.
+   1% service fee as its own line, and the exact amount in your currency the
+   bank would receive.
 4. Continue to **Review & cash out**, pick a bank, enter any 10-digit account
    number and a name, and confirm — the payout instruction is prepared and
    each step's status is shown honestly.
@@ -57,7 +60,8 @@ Standard library only, no keys. It reads the account's live NEAR and USDC
 balances via NEAR RPC, pulls the live NEAR price and a real dry-run quote
 (10 NEAR → USDC) from the 1Click API, fetches the live USD/NGN rate, and
 prints the end-to-end naira figure with the fee broken out — the same calls
-and the same maths as the app.
+and the same maths as the app (the CLI verifies in NGN; the app applies the
+identical maths to every supported currency).
 
 ## How it works
 
@@ -79,7 +83,7 @@ One self-contained `index.html` — no build step, no server, no keys:
 Off-ramps exist (continental exchanges, P2P desks, global on/off-ramp
 providers). None is NEAR-native with Intents under the hood, and the P2P route
 most Nigerians actually use prices opaquely — the counterparty's spread is the
-product. NearNaira's bet is that **radical rate transparency** (mid-market rate
+product. NearLocal's bet is that **radical rate transparency** (mid-market rate
 shown, every fee itemised, live solver quotes instead of a house price) plus
 a fiat-first wallet is the version people trust with real money.
 
